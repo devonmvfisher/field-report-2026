@@ -20,6 +20,8 @@ Status as of Oct 6, 2026.
 | Not reported anywhere yet | **11** |
 | Rated blocker / major / minor | 3 / 29 / 28 |
 
+Recount the headline numbers on your own logs with [session-counter](https://github.com/devonmvfisher/session-counter). On the author's Oct 1 to 3 logs it reproduces 208 failed requests in 54 incidents, 353 watchdog kills and 39 lost agents.
+
 | Class | Items | Public | Private only | Unreported |
 |---|---|---|---|---|
 | [Workflow runtime](ITEMS.md#workflow-runtime) | 13 | 5 | 8 | 0 |
@@ -31,7 +33,7 @@ Status as of Oct 6, 2026.
 | [Auto mode and safeguards](ITEMS.md#auto-mode-and-safeguards) | 4 | 0 | 4 | 0 |
 | [Model behaviour](ITEMS.md#model-behaviour) | 6 | 0 | 5 | 1 |
 
-The five public items are comments on [#88993](https://github.com/anthropics/claude-code/issues/88993) (the 180 s watchdog, and the retry that resends a completed call), [#94012](https://github.com/anthropics/claude-code/issues/94012) ("completed" with failed agents), [#96640](https://github.com/anthropics/claude-code/issues/96640) (the chat message relayed into agents) and [#87140](https://github.com/anthropics/claude-code/issues/87140) (one Stop ends every agent), all posted Oct 3, 2026.
+The five public items are comments on [#88993](https://github.com/anthropics/claude-code/issues/88993) (the 180 s watchdog, and the retry that resends a completed call), [#94012](https://github.com/anthropics/claude-code/issues/94012) ("completed" with failed agents), [#96640](https://github.com/anthropics/claude-code/issues/96640) (the chat message relayed into agents) and [#87140](https://github.com/anthropics/claude-code/issues/87140) (one Stop ends every agent), all posted Oct 3, 2026. Five items sit on four issues because FR-01 and FR-02 share #88993.
 
 ## Who wrote it
 
@@ -81,7 +83,7 @@ Each class gets its own repo with the full write-up of its items: what happens, 
 |---|---|---|
 | field-report-2026 | This index: every item, its status, and the method. | this repo |
 | workflow-agent-bugs | Workflow runtime faults: the 180 s watchdog, the retry that resends a paid call, "completed" over failed agents, one Stop ends all, relayed chat, parallel copies, refused script paths. | not yet published |
-| session-counter | Standard-library counters (Python and Node) that recount failed requests, give-ups, watchdog kills and lost agents from your own local logs. Synthetic fixtures only. | not yet published |
+| [session-counter](https://github.com/devonmvfisher/session-counter) | Standard-library counters (Python and Node) that recount failed requests, give-ups, watchdog kills and lost agents from your own local logs. Synthetic fixtures only. | published |
 | api-drops-report | Connection drops and retry chains: counts, the timeline method, messages that wait behind a retry chain, no restart after a give-up, and the correction that drops do not follow context size. | not yet published |
 | rules-that-dont-fire | Rules that live only in memory files fail mid-session, the working method is lost after a compaction, and nothing shows what is loaded. | not yet published |
 | desktop-continuity-report | Restarts and retention: workflows and monitors lost at a restart, unsent drafts lost, outputs gone, 30-day transcript deletion without notice, phone file limits. | not yet published |
