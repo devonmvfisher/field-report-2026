@@ -5,7 +5,7 @@ An independent user's field report. Not affiliated with Anthropic.
 Where every piece of this repository came from, and under which terms.
 
 ```
-PROVENANCE: field-report-2026 | updated 2026-10-06 CT | drafted by a Claude (Opus 5.5) agent for Devon Fisher | rung now SCRATCH -> target published
+PROVENANCE: field-report-2026 | updated 2026-10-19 CT | written by Claude (Opus 5.5) agents for Devon Fisher | published 2026-10-06
 Need:   a public, citable index of every item in the author's field report on Claude Code, the Claude desktop
         app and Claude in Chrome, with each item's public status. Readers: Anthropic staff, other users with
         the same faults, and the planned topic repos that will link to it.
@@ -25,7 +25,7 @@ Absorb:
 Reject: raw logs, transcripts, screenshots, session, request and feedback ids, quoted chat, local paths,
         contest names and most third-party tool names; per-item evidence pages (they belong in the topic
         repos, each with its own privacy check); items held back for privacy (not named).
-Add:    one id scheme across all classes (FR-01 to FR-60); a three-way status (public, private,
+Add:    one id scheme across all classes (FR-01 to FR-60 and FR-62); a three-way status (public, private,
         unreported) with dates; earlier ids so the private reports can be matched; related open issues
         per row; a method anyone can use to recount the headline numbers from their own logs.
         | Proof: ITEMS.md was generated from ITEMS.csv by a one-off script that is not shipped. Checks run
@@ -35,7 +35,7 @@ Next rung needs: a cold read by someone who wrote none of it, a prepublish scan 
         author's review of every row, and his yes to publish. He makes the push himself.
 ```
 
-Rung: SCRATCH (2026-10-06, judged by the maker, a Claude agent; evidence: the checks listed under Proof) | Next rung needs: the cold read, the prepublish scan and the author's review named above.
+Rung: published 2026-10-06 (about 09:20 CT), on the author's Create click; a Claude script pushed the files. Done before publishing: AI claim checks and a pattern scan for private details. Not done: a cold read by a person, and the author's review of every row.
 
 ## Licence
 

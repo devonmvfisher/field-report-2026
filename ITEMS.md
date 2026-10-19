@@ -2,7 +2,7 @@ An independent user's field report. Not affiliated with Anthropic.
 
 # Items
 
-Every item in the field report, one row each: 60 items in 8 classes, status as of 2026-10-06. The same rows, with the class and planned topic repo on every row, are in [ITEMS.csv](ITEMS.csv). How to read the columns: [README.md](README.md#how-to-read-the-table). How items were found and counted: [METHOD.md](METHOD.md).
+Every item in the field report, one row each: 61 items in 8 classes, status as of 2026-10-06. The same rows, with the class and planned topic repo on every row, are in [ITEMS.csv](ITEMS.csv). How to read the columns: [README.md](README.md#how-to-read-the-table). How items were found and counted: [METHOD.md](METHOD.md).
 
 ## Totals
 
@@ -15,10 +15,10 @@ Every item in the field report, one row each: 60 items in 8 classes, status as o
 | [Desktop app papercuts](#desktop-app-papercuts) | desktop-papercuts | 9 | 0 | 9 | 0 |
 | [Claude in Chrome](#claude-in-chrome) | browser-agent-field-notes | 8 | 0 | 6 | 2 |
 | [Auto mode and safeguards](#auto-mode-and-safeguards) | refusals-without-a-rule | 4 | 0 | 4 | 0 |
-| [Model behaviour](#model-behaviour) | model-behaviour-notes | 6 | 0 | 5 | 1 |
-| **All 8 classes** | | **60** | **5** | **44** | **11** |
+| [Model behaviour](#model-behaviour) | model-behaviour-notes | 7 | 0 | 5 | 2 |
+| **All 8 classes** | | **61** | **5** | **44** | **12** |
 
-By severity: blocker 3, major 29, minor 28 (10 of the minor items are papercuts).
+By severity: blocker 3, major 30, minor 28 (10 of the minor items are papercuts).
 
 ## Workflow runtime
 
@@ -61,7 +61,7 @@ Planned topic repo: `rules-that-dont-fire` (not yet published). 7 items.
 |---|---|---|---|---|---|---|---|
 | FR-20 | Compaction near 900k tokens blocks the chat for 2 to 11 minutes, and the session transcript writes some records up to 3 times (16,743 of 50,840 records were repeats), which inflates any count taken from it. | major | 2026-09-25 | Windows 11; desktop app Code tab; main chat | private: sent to Anthropic on 2026-10-02; no public issue | MEM-1 |  |
 | FR-21 | A compaction summary keeps the task list but drops the working method: installed skills, tools built in the session, and how work is checked. | minor | 2026-09-26 | Windows 11; desktop app Code tab; main chat | private: sent to Anthropic on 2026-10-02; no public issue | MEM-2 |  |
-| FR-22 | No panel or command shows which rules and memory files are loaded for the session or for an agent, or what is reread after a compaction (the author counted 14 rule breaks in 2 days). | major | 2026-10-04 | Windows 11; desktop app Code tab | unreported | none |  |
+| FR-22 | No panel or command shows which rules and memory files are loaded for the session or for an agent, or what is reread after a compaction (a Claude agent counted 14 breaks of the setup's own rules by the main Claude session in 2 days, from the user's complaints and the error ledgers). | major | 2026-10-04 | Windows 11; desktop app Code tab | unreported | none |  |
 | FR-23 | Agents break a hard rule printed in their prompt about 1 time in 3 and rarely say so (311 of 974 agents that used Bash ran a forbidden change-directory command; no harm found). | minor | 2026-10-02 | Windows 11; desktop app Code tab; workflow agents | unreported | none |  |
 | FR-24 | A user skill created during a session answered "Unknown skill" 3.5 hours later in the same session. | minor (papercut) | 2026-09-29 | Windows 11; desktop app Code tab | private: sent to Anthropic on 2026-10-02; no public issue | MEM-3 |  |
 | FR-25 | Harness flags are noisy: an "instruction-shaped pattern" prefix on agent results that quote settings text, and a shared-scratchpad flag. | minor (papercut) | 2026-09-27 | Windows 11; desktop app Code tab; workflow agents | private: sent to Anthropic on 2026-10-02; no public issue | CC-12 |  |
@@ -121,11 +121,11 @@ Planned topic repo: `refusals-without-a-rule` (not yet published). 4 items.
 | FR-51 | The auto-mode classifier blocks routine steps (false positives such as car photos flagged as personal data) and sometimes gives no verdict; 7 more subagent denials on Oct 2 and 3, at least 3 of them false positives. | major | 2026-09-25 | Windows 11; desktop app Code tab; auto mode | private: sent to Anthropic on 2026-10-02; no public issue | PERM-1 |  |
 | FR-52 | Commit-type steps the user asked for (an upload, a form submit) are blocked until the user types a yes, with no approve-once option. | major | 2026-10-02 (or earlier) | Windows 11; Claude in Chrome; auto mode | private: sent to Anthropic on 2026-10-02; no public issue | PERM-2 |  |
 | FR-53 | Two safeguard stops and one content-filter error ended creative work with no reason and no retry; one stop may have been fair, and the ask is a reason and a way to revise. | major | 2026-09-29 | Windows 11; desktop app Code tab | private: sent to Anthropic on 2026-10-02; no public issue | PERM-3 |  |
-| FR-54 | Auto-mode refusals name no rule: a workflow launch refused with no explanation (relaunched a minute later), an agent blocked from re-reading a page, and a push to the user's own repository and a restart of the user's own script refused, the same restart allowed 2 hours earlier. | minor | 2026-10-02 | Windows 11; desktop app Code tab; auto mode | private: the Oct 2 workflow-launch case and the ask to name the rule were sent to Anthropic on 2026-10-03; the later cases are not yet sent; no public issue | none |  |
+| FR-54 | Auto-mode refusals name no rule: a workflow launch refused with no explanation (it would have had agents drive two web apps whose terms ban automated use, as agents had already done there on Sep 29 and 30 without a block; it was relaunched with those steps moved to the user's own clicks), an agent blocked from re-reading a page, and a push to the user's own repository and a restart of the user's own script refused, the same restart allowed 2 hours earlier. | minor | 2026-10-02 | Windows 11; desktop app Code tab; auto mode | private: the Oct 2 workflow-launch case and the ask to name the rule were sent to Anthropic on 2026-10-03; the later cases are not yet sent; no public issue | none |  |
 
 ## Model behaviour
 
-Planned topic repo: `model-behaviour-notes` (not yet published). 6 items.
+Planned topic repo: `model-behaviour-notes` (not yet published). 7 items.
 
 | ID | What happens | Severity | First seen | Environment | Status | Earlier id | Related open issues |
 |---|---|---|---|---|---|---|---|
@@ -135,5 +135,6 @@ Planned topic repo: `model-behaviour-notes` (not yet published). 6 items.
 | FR-58 | Caveats and capabilities were lost between research, summaries and compactions, such as a tool built in the session being forgotten. | major | 2026-09-26 | Opus 5.5; desktop app Code tab | private: sent to Anthropic on 2026-10-02; no public issue | OWN-4 |  |
 | FR-59 | Heavy or unsettled work was launched without checks, such as parallel jobs pushing memory to 97 to 99% and agents using the browser during the user's own upload. | major | 2026-09-27 | Opus 5.5; desktop app Code tab | private: sent to Anthropic on 2026-10-02; no public issue | OWN-5 |  |
 | FR-60 | A visual claim was made from expectation: a clock face with one hand and no numerals was read as the exact time the plan asked for, and a check that knew the plan passed it. | major | 2026-10-01 | Opus 5.5; desktop app Code tab | unreported | none |  |
+| FR-62 | Text Claude wrote put the user's name on work agents did: four GitHub issue comments in his first person, written and posted by an agent from his account (Oct 3); a contest bio that voiced Claude's opinions as his (Sep 30); this index's own line that he reviews the files (Oct 6); and orders for other agents written in his voice ('my own words'), after which one agent wrote that he had authorized its changes (Oct 7). | major | 2026-09-30 | Opus 5.5; desktop app Code tab; workflow agents | unreported | none |  |
 
-Related open issues were noted from searches of the public tracker made on Oct 2 and 3, 2026, and were not re-checked for this index. Where a status says public, the author posted a comment on that issue.
+Related open issues were noted from searches of the public tracker made on Oct 2 and 3, 2026, and were not re-checked for this index. Where a status says public, a comment was posted on that issue from the author's account (written and posted by a Claude agent on his yes, Oct 3).

@@ -21,8 +21,8 @@ Nobody else's logs were used. No network traffic was captured.
 1. **Sep 30.** Five sweeps over different kinds of record (notes, the main chat, tool use and workflows among them) produced about 200 candidate items with heavy overlap. They were merged into 74 verified items: 31 about Anthropic products, 8 about other vendors and Windows, and 35 about the author's own process, his scripts and Claude's own mistakes.
 2. **Oct 1 to 2.** New faults were added as they happened. The list was written up as a private report to Anthropic and sent on Oct 2, with Claude's own mistakes summarised as behaviour patterns.
 3. **Oct 3.** The connection drops and watchdog kills from Oct 1 to 3 were recounted by script (see "Recount it yourself" below). The recount also found faults that were new at the time.
-4. **Oct 6.** A census went through every record again, from Sep 19 to Oct 5. It listed each product fault with its first-seen date and where it had been reported, and kept the operator's own mistakes in a separate list.
-5. **This index** starts from that census and the plan for the topic repos. It adds one behaviour case found during the work (FR-60) and leaves out items held back for privacy.
+4. **Oct 6.** A census went through every record again, from Sep 19 to Oct 5. It listed each product fault with its first-seen date and where it had been reported, and kept the mistakes of the main Claude session that ran the agents (called the operator in our notes) in a separate list.
+5. **This index** starts from that census and the plan for the topic repos. It adds one behaviour case found during the work (FR-60) and leaves out items held back for privacy. On Oct 19 one row was added: FR-62, lines that put the user's name on agents' work.
 
 ## How items were checked
 
@@ -36,8 +36,8 @@ Nobody else's logs were used. No network traffic was captured.
 
 - **One row per fault.** A later sighting of the same fault adds evidence to that row; it does not add a row.
 - **Merged rows.** Three small tool limits are one row (FR-13). The "completed" status and agent starts that never end are one row (FR-03), because both show up in the same run records.
-- **Behaviour patterns.** Claude's own mistakes are grouped into six patterns (FR-55 to FR-60). Each pattern stands for several instances; the instances are not counted.
-- **Not counted:** faults in other vendors' tools and in Windows (planned for their own repo), bugs in the author's own code and scripts, and process mistakes by the operator that no product change would fix.
+- **Behaviour patterns.** Claude's own mistakes are grouped into seven patterns (FR-55 to FR-60 and FR-62). Each pattern stands for several instances; the instances are not counted.
+- **Not counted:** faults in other vendors' tools and in Windows (planned for their own repo), bugs in the author's own code and scripts, and process mistakes that no product change would fix, made by the main Claude session that ran the agents (called the operator in our notes).
 - **Held back:** some items are held back for privacy.
 
 ## Severity
@@ -52,7 +52,7 @@ Items with an earlier id keep the rating they were given in the private report w
 
 Status is as of Oct 6, 2026.
 
-- **public**: the author posted a comment with this item's evidence on an open issue in anthropics/claude-code. Only his own comments count; an open issue by someone else is listed under related_issues instead.
+- **public**: a comment with this item's evidence is on an open issue in anthropics/claude-code, posted from the author's account. The four comments were written and posted by a Claude agent through Claude in Chrome on Oct 3, on his yes. Only comments from his account count; an open issue by someone else is listed under related_issues instead.
 - **private**: sent to Anthropic through a private channel (the feedback email address or in-app feedback) on the date shown, with no public issue yet.
 - **unreported**: no record was found that it was sent anywhere. The author's own sent records were searched; GitHub was not re-searched for this index. A report carrying most of the unreported items was being drafted on Oct 6; the items stay "unreported" here until a send is recorded.
 
@@ -69,7 +69,7 @@ Status is as of Oct 6, 2026.
 
 ## Ids
 
-FR-01 to FR-60 were assigned for this index, in class order. The earlier_ids column gives the id each item had in the author's private reports, so Anthropic can match the two. The planned topic repos will use the FR ids.
+FR-01 to FR-60 and FR-62 were assigned for this index, in class order; FR-61 is not used yet. The earlier_ids column gives the id each item had in the author's private reports, so Anthropic can match the two. The planned topic repos will use the FR ids.
 
 ## Recount it yourself
 
